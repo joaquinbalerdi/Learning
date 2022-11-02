@@ -1,0 +1,137 @@
+/* 
+Unidades de Medida
+ 1) Absolutas (su valor no cambia, son unidades del mundo real)
+  pc, cm, mm, in, Q
+  pt (1/72in)
+  px (1/96in)
+ 2) Relativas (su valor es relativo a un contexto)
+  em, rem, ex, ch - al tamaño de la fuente
+   em - basada en la anchura de la "m" de la fuente del elemento
+   rem - basada en la anchura de la "m" de la fuente del elemento raíz (html)
+   ex - basada en la altura de la "x" d ela fuente del elemento
+   ch - basada en la anchura del "0" de la fuente del elemento
+  % - al tamaño del contenedor
+  vw, vh, vmin, vmax - al tamaño del viewport
+   vw - ancho del viewport van de 1 a 100
+   vh - alto del viewport van de 1 a 100
+   vmim - entre vw y vh toma el que tenga menor valor
+   vmax - entre vw y vh toma el que tenga mayor valor
+ Conversiones entre unidades - http://pxtoem.com/
+*/
+
+html {
+  box-sizing: border-box;
+  background-color: black;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: blanchedalmond;
+  margin: 0;
+}
+
+.pixels {
+  background-color: cadetblue;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  font-size: 16px; /*es mejor no usar pixeles para designar el font-size*/
+  border: thick solid rebeccapurple;
+}
+
+.ems {
+  background-color: cadetblue;
+  font-size: 24px; /* si comento esta linea hace q el tamaño de fuente del contenedor hijo varíe */
+  padding: 1em 0.5em;
+  border: thick solid rebeccapurple;
+}
+
+.em-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5em;
+  padding: 1em;
+  font-size: 2em;
+}
+
+.rems {
+  background-color: cadetblue;
+  font-size: 24px;
+  padding: 1rem 0.5rem;
+  border: thick solid rebeccapurple;
+}
+
+.rem-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/* Este no es de uso común */
+.exs {
+  background-color: cadetblue;
+  font-size: 24px;
+  padding: 1ex 0.5ex;
+  border: thick solid rebeccapurple;
+}
+
+.ex-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5ex;
+  padding: 1ex;
+  font-size: 2ex;
+}
+
+/* significan la cantidad de carácteres q ocupan */
+.chs {
+  background-color: cadetblue;
+  width: 10ch;
+}
+
+.percentage {
+  background-color: darkkhaki;
+  padding: 5%;
+  margin: 20% 10%;
+  width: 80%;
+  font-size: 150%;
+  height: 100%; /* A la altura la define el contenido*/
+}
+
+.height-parent {
+  background-color: brown;
+  width: 500px;
+  height: 500px;
+}
+
+.height-child {
+  background-color: coral;
+  width: 50%;
+  height: 50%; /*toma el 50% del tamaño del contenedor padre porque esta definido por la variable height*/
+}
+
+.viewport {
+  background-color: darkcyan;
+  width: 50vw;
+  /* Recuerda que la etiqueta body tiene márgenes por defecto y recuerda que las barras de scroll del navegador también forman parte del viewport */
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  font-size: 5vw;
+  padding: 2vh 2vw;
+}
+
+.vmin,
+.vmax {
+  background-color: darksalmon;
+  border: thick solid cyan;
+  width: 50vmax;
+  height: 50vmin;
+}

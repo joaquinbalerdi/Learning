@@ -1,0 +1,134 @@
+/* 
+Estilos de la Fuente:
+ font-family
+ font-size
+ font-weight
+ font-style
+ font-variant
+ line-height - interlineado de altura.
+ font
+*/
+
+.font {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: oblique;
+  font-variant: small-caps; /*Convitrió todas las letras en Myúsculas*/
+  line-height: 2;
+  font: italic small-caps bold 24px / 1.5 monospace;
+  /*hayq poner separacion "/" entre font size y font height- normalmente se evitan los shorthands de fuentes*/
+}
+
+/*
+Formato woff o woff2 - Web Open Font Format
+
+font-display: 
+ auto - permite que el navegador utilice el método predeterminado que suele ser block
+ block - oculta brevemente el texto hasta que la fuente haya sido descargada por completo
+ swap - indica al navegador que utilize la fuente alternativa para mostrar el texto hasta que la fuente personalizada se haya cargado por completo
+ fallback - es una mezcla de auto y swap
+ optional - ocultará el texto, luego lo cargará con la fuente alternativa y finalmente aplicara la fuente personalizada
+*/
+
+@font-face {
+  font-family: "chalet";
+  src: url("../assets/Chalet.woff") format("woff");
+  font-display: swap;
+  /*  url("../chalet.woff2") format(woff2);para volver atras en el link de buscqueda se utiliza "../" */
+}
+
+.chalet {
+  font-family: "chalet", sans-serif;
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "pecita";
+  src: url("../assets/Pecita.woff") format("woff");
+  font-display: swap;
+}
+
+.pecita {
+  font-family: "pecita", cursive;
+  font-size: 2em;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+}
+
+/*
+text-align
+text-decoration
+text-indent
+text-overflow
+  overflow: hidden
+  white-space: nowrap;
+text-transform
+
+letter-spacing
+white-space
+
+word-break
+word-spacing
+writing-mode
+*/
+
+.text {
+  font: 2rem;
+  text-align: center;
+  text-align: left;
+  text-decoration: overline;
+  text-decoration: none;
+  text-indent: 3rem;
+  text-transform: capitalize;
+  text-transform: lowercase;
+  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: 0.5rem;
+  word-break: keep-all;
+  word-break: break-all;
+  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
+}
+
+.text a {
+  text-decoration: none;
+}
+
+.text-overflow {
+  font-size: 2rem;
+  background-color: blanchedalmond;
+  border: thin solid black;
+  padding: 1rem;
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.white-space {
+  white-space: pre; /*Esta linea es reemplazada en el archivo html por <pre>Texto con interlineado y espacios en blanco</pre>*/
+}
+
+.word-spacing {
+  font-size: 2rem;
+  word-spacing: 1rem;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mde">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efectos Visuales en CSS</title>
+    <link rel="stylesheet" href="CSS/visual-effects.css" />
+  </head>
+  <body>
+    <h1>Efectos Visuales en CSS</h1>
+    <hr />
+    <h2>Sombras</h2>
+    <div class="box shadows">
+      <p>Sombras</p>
+    </div>
+    <div class="box shadows-multiple">
+      <p>Sombras</p>
+    </div>
+    <div class="box drop-shadow">
+      <img src="assets/arbol.png" alt="Niño y Árbol" />
+    </div>
+    <hr />
+    <h2>Degradados</h2>
+    <h3>Lineal</h3>
+    <div class="box linear-gradient"></div>
+    <h3>Radial</h3>
+    <div class="box radial-gradient"></div>
+    <h3>Cónico</h3>
+    <div class="box conic-gradient"></div>
+    <h3>Repetir Degradados</h3>
+    <div class="box repeat-gradient-linear"></div>
+    <div class="box repeat-gradient-radial"></div>
+    <div class="box repeat-gradient-conic"></div>
+    <h3>Gráficas con Degradados</h3>
+    <div class="box chart-gradient"></div>
+    <div class="box donut-gradient"></div>
+    <hr />
+    <h2>Filtros</h2>
+    <h3>Filtros</h3>
+    <article class="card">
+      <img
+        class="filter"
+        src="assets/puesta-sol.jpg"
+        alt="kenai puesta de sol"
+      />
+    </article>
+    <h3>Filtros Múltiples</h3>
+    <article class="card">
+      <img
+        class="filter-multiple"
+        src="assets/puesta-sol.jpg"
+        alt="kenai puesta de sol"
+      />
+    </article>
+    <h3>Filtros a Fondos</h3>
+    <article class="card relative">
+      <img src="assets/puesta-sol.jpg" alt="puesta de sol" />
+      <div class="backdrop-filter">
+        <h4>Puesta de Sol</h4>
+      </div>
+    </article>
+    <h3>Filtros Múltiples a Fondos</h3>
+    <article class="card relative">
+      <img src="assets/puesta-sol.jpg" alt="puesta de sol" />
+      <div class="backdrop-filter-multiple">
+        <h4>Puesta de Sol</h4>
+      </div>
+    </article>
+    <h3>Modo Dark/Light con Filtros</h3>
+    <article class="card">
+      <img src="assets/puesta-sol.jpg" alt="puesta de sol" />
+    </article>
+    <article class="card">
+      <img src="assets/favicon.png" alt="kenai" />
+    </article>
+    <hr />
+    <h2>Modos de Mezcla</h2>
+    <h3>Sobre Imégenes (img)</h3>
+    <article class="card relative blend-modes">
+      <img src="assets/puesta-sol.jpg" alt="puesta de sol" />
+      <img class="absolute" src="assets/BuenosDias.jpg" alt="buenos dias" />
+    </article>
+    <h3>Sobre Imágenes de Fondo (background-img)</h3>
+    <article class="card bg-blend-modes"></article>
+    <hr />
+    <h2>Máscaras</h2>
+    <article class="card clip-path">
+      <img src="assets/puesta-sol.jpg" alt="Puesta de Sol" />
+    </article>
+    <hr />
+    <h2>Formas</h2>
+    <article class="shapes">
+      <h3>Ejemplos de Formas y Siluetas entre textos e imágenes</h3>
+      <img
+        src="assets/puesta-sol.jpg"
+        alt="Puesta de Sol"
+        class="float-left shape-1"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <img
+        src="assets/puesta-sol.jpg"
+        alt="Puesta de Sol"
+        class="float-right shape-2"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <img
+        src="assets/puesta-sol.jpg"
+        alt="Puesta de Sol"
+        class="float-left shape-3"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+        veniam minima quas, unde expedita asperiores est repellendus adipisci,
+        tempore ullam quasi quo et eum laudantium ut praesentium soluta
+        aspernatur!
+      </p>
+    </article>
+    <a class="manitos" href="index.html#temario-css">🖕</a>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

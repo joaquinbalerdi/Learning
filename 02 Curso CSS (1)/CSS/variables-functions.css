@@ -1,0 +1,62 @@
+:root {
+  color: darkgreen;
+  --default-bg-color: skyblue; /*Lo ideal es aplicar las variables nuevas en esta etiqueta de root (raíz) si queremos que funcione en todos los elementos*/
+}
+
+html {
+  color: red;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.custom-props-1 {
+  --primary-color: gray;
+  --font-size: 32px;
+  background-color: var(--primary-color);
+}
+
+.custom-props-2 {
+  background-color: var(--default-bg-color);
+  border: thin solid var(--border-color);
+  padding: 1rem;
+}
+
+.custom-props-3 {
+  font-size: var(--font-size);
+  border: thin solid var(--border-color);
+}
+
+.title-props {
+  --primary-color: navy;
+  color: var(--primary-color, orange);
+  background-color: var(--default-bg-color);
+  /*no lo toma porque no esta dentro de la familia en donde se crearon las variables, pero si le creamos una variable dentro de la clase tomaria este antes que el segundo, si se le agrega otro valor toma ese*/
+}
+
+.ch-10 {
+  --padding-size: 3ch;
+  --num-ch: 10ch;
+  background-color: var(--default-bg-color);
+  font-size: 2rem;
+  padding: var(--padding-size);
+  width: calc(
+    var(--num-ch) + var(--padding-size) * 2
+  ); /*separar siempre los simbolos de los calculos con espacios*/
+  /* width: calc(10ch + 2ch * 2); */
+}
+
+.min-max {
+  background-color: var(--default-bg-color);
+  margin-top: 1rem;
+  width: min(150px, 20vw);
+  height: max(150px, 25vh);
+}
+
+h1 {
+  font-size: clamp(2rem, 1rem + 3vw, 2.5rem);
+}

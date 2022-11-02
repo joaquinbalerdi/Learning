@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios en CSS</title>
+    <link rel="stylesheet" href="CSS/forms.css" />
+  </head>
+  <body>
+    <h1>Formularios en CSS</h1>
+    <form
+      class="contact-form"
+      action="https://formsubmit.co/joacobalerdi95@hotmail.com"
+      method="post"
+    >
+      <!-- tiene que tener el atributo name -->
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Escribe tu nombre"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+        title="Nombre solo acepta letras y espacios en blanco"
+        required
+      />
+      <input
+        type="email"
+        name="correo"
+        placeholder="Escribe tu correo"
+        pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+        title="formato de correo inválido"
+        required
+      />
+      <textarea
+        name="comentarios"
+        placeholder="Escribe tus comentarios"
+        cols="30"
+        rows="10"
+        required
+      ></textarea>
+      <input type="submit" />
+    </form>
+    <a class="manitos" href="index.html#temario-css">🖕</a>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
