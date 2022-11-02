@@ -1,0 +1,52 @@
+[class^="box"] {
+  margin: 3rem auto;
+  background-color: orangered;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+}
+
+.box-flexible {
+  width: 50%;
+  height: 20vh;
+}
+
+.box-flexible-2 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height:480px ;
+  min-height: 280px;
+}
+
+.box-flexible-3 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height:480px ;
+  min-height: 280px;
+  /* Estos tienen mayor jerarquía por lo que ignoran los min/max */
+  width: 300px;
+  height: 300px;
+}
+
+.box-flexible-4 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height:480px ;
+  min-height: 280px;
+  width: 50%;
+  height: 20vh;
+}
+
+/* 
+Concluciones:
+  Si al width y height los definimos en pixeles, no vamos a tener fluidez en el objeto, porque son de máxima jerarquía sobre min/max-height/width.
+  Pero si definimos la altura y la anchura con unidades relativas (como porcentaje % o viewport height vh) van a tener mas jerarquía las propiedades width y height como la anterior, pero cuando llegan a un mínimo o un máximo si obedecen a las propiedades min/max-height/width.
+ */
+
+
+ img {
+  max-width: 100%;
+  height: auto;
+ }
