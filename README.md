@@ -1,2 +1,2 @@
 # Learning
-here I will upload my progress in the studies of HTML CSS and JS
+here I will upload my progress in the studies of HTML, CSS, JS & PHP
